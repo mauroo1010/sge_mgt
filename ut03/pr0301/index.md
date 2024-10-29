@@ -23,4 +23,4 @@
 ## Paso 6: Final
 - Por último, descarga la factura y envíala al cliente.
 
-[Factura Odoo](https://imgur.com/a/CjanYKQ)
+[Factura Odoo](https://imgur.com/aEWoW09)
