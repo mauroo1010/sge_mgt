@@ -54,4 +54,4 @@ Para integrar Odoo con Google y buscar imágenes automáticamente, sigue estos p
 2. En el menú **Acciones**, selecciona la opción **Obtener imágenes de Google Imágenes**.
 3. Si el producto tiene un **código EAN**, el sistema buscará y cargará automáticamente la imagen del producto desde Google Imágenes.
 
-[Captura productos](https://imgur.com/a/ucT8waf)
+[Captura productos](https://imgur.com/zdOLWpW)
