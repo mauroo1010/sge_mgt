@@ -1,7 +1,5 @@
 # Crear una Factura en Odoo
 
-# Instrucciones para Activar y Utilizar el Módulo de Facturación en Odoo
-
 1. **Activar el módulo de Facturación**  
    Lo primero que debemos hacer es habilitar el módulo de Facturación de Odoo.
 
