@@ -1,57 +1,56 @@
-# Documentación: Módulo Inventario en Odoo - Alta de Productos y Búsqueda de Imágenes
+# Instrucciones para Activar el Módulo de Inventario y Configurar la API de Google en Odoo
 
-## 1. Alta de Productos
-El proceso de alta de productos es similar al proceso de alta de clientes. Existen dos maneras principales de dar de alta productos en el sistema:
+## 1. Activar el Módulo de Inventario
 
-### 1.1 Alta Manual
-Se puede registrar un producto manualmente ingresando todos los datos necesarios directamente en el sistema.
+1. Ve al menú de aplicaciones en Odoo.
+2. Busca el módulo de Inventario y selecciona la opción de **Activar**.
 
-### 1.2 Alta Automática
-Se pueden importar productos mediante la carga de archivos **Excel** o **CSV**, lo cual permite agregar grandes cantidades de productos al sistema de una sola vez.
+## 2. Importar Productos desde un Archivo Excel
 
-### 1.3 Asociación de Imágenes a Productos
-Una funcionalidad interesante es la capacidad de asociar imágenes a los productos. Aunque este proceso es difícil de automatizar, Odoo permite la integración con la **Google Custom Search API**, lo que posibilita la búsqueda automática de imágenes a partir del **código EAN** del producto.
+1. Dirígete a **Inventario > Productos > Productos**.
+2. Haz clic en **Favoritos > Importar registros**.
+3. Selecciona el archivo, en este caso `libros.xls`, y cárgalo.
+4. Verifica que los campos de **Título**, **Precio** y **EAN** estén correctamente mapeados. Desmarca la opción de **Imagen**, ya que esta se cargará a través de la API.
+5. Haz clic en **Importar**.
 
-## 2. Integración con Google Custom Search API
+## 3. Obtener y Configurar la Clave API de Google
 
-### 2.1 Obtener una API Key de Google
-Para integrar Odoo con Google y buscar imágenes automáticamente, sigue estos pasos:
+### 3.1. Crear una Clave API
 
-1. **Acceder a Google APIs y Servicios**:
-   - Visita Google Cloud Console
-   - Regístrate o accede con una cuenta de Google.
+1. Accede a **Google API’s y Servicios**.
+2. Selecciona o crea un nuevo proyecto.
+3. Ve a la sección de **Credenciales** y selecciona **Crear credenciales > Clave de API**.
+4. Copia y guarda la clave generada.
 
-2. **Crear un nuevo proyecto**:
-   - En el panel de control, crea un nuevo proyecto.
+### 3.2. Habilitar la API de Búsqueda Personalizada
 
-3. **Crear credenciales**:
-   - Ve a la sección "Credenciales" y selecciona "Crear credenciales".
-   - Elige la opción "Clave de API". Esto generará una **API Key** que se utilizará en Odoo.
+1. En el panel de **Biblioteca**, busca **Custom Search API**.
+2. Haz clic en **Habilitar**.
 
-### 2.2 Activar la Custom Search API
-1. En la sección de "Biblioteca" de Google Cloud Console, busca **Custom Search API**.
-2. Activa esta API para poder realizar búsquedas RESTful en Internet.
+## 4. Crear un Motor de Búsqueda Programable
 
-### 2.3 Configurar Google Programmable Search Engine
-1. Accede al Google Programmable Search Engine
-2. Crea un nuevo motor de búsqueda:
-   - Asigna un nombre.
-   - Configura el motor para buscar en toda la web.
-   - Habilita la opción de "Búsqueda por imágenes" y la "Búsqueda segura".
-3. Una vez creado el motor de búsqueda, obtén el **ID del buscador**, que será necesario para configurar Odoo.
+1. Accede a **Google Programmable Search Engine**.
+2. Selecciona **Añadir**.
+3. Configura el motor de búsqueda:
+   - **Nombre**: Asigna un nombre que describa su propósito.
+   - **Dónde buscar**: Selecciona **Buscar en toda la web**.
+   - **Configuración de búsqueda**: Activa las opciones de **Búsqueda por imágenes** y **Búsqueda segura**.
+4. Completa el CAPTCHA y haz clic en **Crear**.
+5. Copia el **ID del motor de búsqueda**.
 
-## 3. Configuración en Odoo
+## 5. Configurar Odoo para Usar la API de Google
 
-### 3.1 Ajustes de Integración
-1. Accede a **Ajustes** en Odoo.
-2. Dirígete a la sección de **Integraciones**.
-3. Activa la opción **Google Imágenes**. La página se recargará, mostrando dos campos:
-   - **API Key**: Introduce la clave generada en Google Cloud.
-   - **ID del Motor de Búsqueda**: Introduce el identificador del motor de búsqueda creado en Google Programmable Search Engine.
+1. En Odoo, ve a **Ajustes > Opciones generales > Integraciones**.
+2. Activa la opción **Obtener imágenes de Google** y guarda.
+3. Introduce la **Clave API** y el **ID del motor de búsqueda** obtenidos anteriormente.
+4. Guarda los cambios.
 
-### 3.2 Uso de la Funcionalidad
-1. Una vez configurado Odoo, ve a la sección de **Productos**.
-2. En el menú **Acciones**, selecciona la opción **Obtener imágenes de Google Imágenes**.
-3. Si el producto tiene un **código EAN**, el sistema buscará y cargará automáticamente la imagen del producto desde Google Imágenes.
+## 6. Asignar Imágenes a los Productos
+
+1. Vuelve a **Inventario > Productos > Productos**.
+2. Abre un producto que no tenga imagen.
+3. En el menú desplegable de **Acción**, selecciona **Obtener imagen**.
+4. Odoo buscará y asignará automáticamente una imagen según el código EAN del producto.
+
 
 [Captura productos](https://imgur.com/zdOLWpW)
