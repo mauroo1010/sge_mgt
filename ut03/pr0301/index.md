@@ -1,26 +1,27 @@
 # Crear una Factura en Odoo
 
-## Paso 1: Acceder al Módulo de Facturación
-- Inicia sesión en Odoo con tus credenciales.
-- Desde el **Panel Principal**, selecciona el módulo **Facturación** (Invoicing).
+# Instrucciones para Activar y Utilizar el Módulo de Facturación en Odoo
 
-## Paso 2: Crear una Nueva Factura
-- Una vez dentro del módulo de Facturación, haz clic en el botón **Crear** (Create) en la parte superior de la pantalla.
+1. **Activar el módulo de Facturación**  
+   Lo primero que debemos hacer es habilitar el módulo de Facturación de Odoo.
 
-## Paso 3: Seleccionar el Cliente
-- En el formulario de factura, selecciona el cliente:
-  - En el campo **Cliente** (Customer), haz clic en el cuadro desplegable y selecciona un cliente existente.
-  - Si el cliente no está registrado, puedes agregar uno nuevo haciendo clic en **Crear** (Create).
+2. **Acceder al módulo**  
+   Una vez activado, accederemos al módulo de Facturación utilizando el icono en la esquina superior izquierda.
 
-## Paso 4: Modificación de la Empresa
-- Ve a **Ajustes** para realizar el cambio de colores de la empresa.
-- Un paso muy importante sería también el cambio de logo de la empresa.
+3. **Crear la primera factura**  
+   Seguiremos los pasos indicados por Odoo para crear nuestra primera factura.  
+   - En caso de ser la primera vez que utilizamos esta base de datos, será necesario crear la empresa, introduciendo sus datos correspondientes.
 
-## Paso 5: Crear la Factura
-- Debemos crear la factura, donde añadiremos el producto y el precio.
-- No olvides añadir la **fecha de la factura**.
+4. **Personalizar el diseño de la factura**  
+   Personalizaremos el diseño de la factura según nuestras preferencias.
 
-## Paso 6: Final
-- Por último, descarga la factura y envíala al cliente.
+5. **Importar la base de clientes**  
+   Antes de generar nuestra primera factura, debemos ir al módulo de clientes e importar nuestra base de datos de clientes.  
+   - Al ingresar en el apartado de clientes, haremos clic en **Favoritos** e importaremos nuestro archivo.  
+   - Tendremos que asignar nombres a los campos del archivo CSV de acuerdo a nuestras necesidades.
+
+6. **Generar la factura**  
+   Una vez completados los pasos anteriores, podremos crear nuestra factura seleccionando el cliente al que vamos a vender y creando el producto si es que aún no tenemos ninguno creado.
+
 
 [Factura Odoo](https://imgur.com/aEWoW09)
