@@ -10,9 +10,9 @@
 
 ## Unidad 4
 
-[Practica0401](/ut04/0401/index.md)
+[Practica0401](/ut04/pr0401/index.md)
 
-[Practica0402](/ut04/0402/index.md)
+[Practica0402](/ut04/pr0402/index.md)
 
 [Practica0403](/ut04/pr0403/index.md)
 
