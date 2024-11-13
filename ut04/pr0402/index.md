@@ -1,6 +1,8 @@
 # PR0402 - EJERCICIOS DE CADENAS EN PYTON
 
 # 1. CONTAR VOCALES Y CONSONANTES
+```python
+
 def contar_vocales_consonantes(cadena):
     vocales = "aeiouAEIOU"
     conteo_vocales = 0
@@ -14,11 +16,18 @@ def contar_vocales_consonantes(cadena):
     
     return conteo_vocales, conteo_consonantes
 
+```
+
 # 2. INVERTIR CADENA
+```python
+
 cadena = "hola que tal"
 print(cadena[::-1])
 
+```
+
 # 3. VERIFICAR PALÍNDROMO
+```python
 
 def invertirCadena (cadena):
     invertida = ""
@@ -34,12 +43,18 @@ def verificarPalindromo (cadena):
 
 verificarPalindromo(input('Introduce una cadena: '))
 
+```
+
 # 4. CONTAR PALABRAS
+```python
 
 def contarPalabras(cadena): print('La cadena tiene '+ str(len(cadena.split())) + ' palabras')
 contarPalabras(input('Introduce una cadena: '))
 
+```
+
 # 5. ELIMINAR CARACTERES REPETIDOS
+```python
 
 def eliminarCharsRepes (cadena):
     nueva = ""
@@ -48,7 +63,10 @@ def eliminarCharsRepes (cadena):
     print(nueva)
 eliminarCharsRepes(input('Introduce una cadena: '))
 
+```
+
 # 6. MAYÚSCULAS Y MINÚSCULAS
+```python
 
 def mayusMinus(cadena):
     nueva = ""
@@ -61,7 +79,10 @@ def mayusMinus(cadena):
 
 mayusMinus(input('Introduce una cadena: '))
 
+```
+
 # 7. INVERTIR PALABRAS DE UNA CADENA
+```python
 
 def invertirCadena (cadena):
     invertida = ""
@@ -70,14 +91,20 @@ def invertirCadena (cadena):
 
 invertirCadena(input('Introduce una cadena: '))
 
+```
+
 # 8. ANAGRAMA
+```python
 
 def esAnagrama(cadena1, cadena2):
     if(sorted(cadena1.lower()) == sorted(cadena2.lower())):print("Es un anagrama :)")
     else: print("No es un anagrama :(")
 esAnagrama(input('Introduce una cadena: '), input('Introduce una cadena: '))
 
+```
+
 # 9. FRECUENCIA CARACTERES
+```python
 
 def frecuenciaChars (cadena):
     diccionario = {}
@@ -88,10 +115,13 @@ def frecuenciaChars (cadena):
             diccionario[i] = 1
     print(diccionario)
 
+```
 
 frecuenciaChars(input('Introduce una cadena: '))
 
 # 10. QUITAR CARACTERES NO ALFANUMÉRICOS
+```python
+
 def eliminar_no_alfanumericos(cadena):
     resultado = ""
     for caracter in cadena:
@@ -102,7 +132,11 @@ texto = "¡Hola, mundo! Esto es un ejemplo: 123."
 resultado = eliminar_no_alfanumericos(texto)
 print(resultado)
 
+```
+
 # 11. TRANSFORMAR CAMELCASE
+```python
+
 str="Hola mundo que tal"
 lista=str.lower().split(" ")
 res=lista[0]
@@ -111,7 +145,11 @@ for palabra in lista[1:]:
     
 print(res)
 
+```
+
 # 15. COMPARAR CADENAS POR VALOR ASCII
+```python
+
 def get_ascii_value(param1):
     value = 0
     for char in param1:
@@ -119,3 +157,5 @@ def get_ascii_value(param1):
     return value
 a = get_ascii_value("Platanos")
 print(a)
+
+```

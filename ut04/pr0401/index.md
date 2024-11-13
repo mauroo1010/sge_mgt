@@ -1,4 +1,5 @@
 # 1. LECTURA DE UN NÚMERO VÁLIDO
+```python
 
 n = input("Introduce un número válido: ")
 
@@ -6,7 +7,10 @@ while (not n.isdigit()):
     n = input("No has introducido un número válido, inténtalo otra vez: ")
 
 print("Has introducido un numero!")
+
+```
 # 2. TABLA DE MULTIPLICAR
+```python
 
 n = int(input("Introduce n: "))
 
@@ -15,7 +19,10 @@ k = int(input("Introduce k: "))
 for i in range(int(k)):
     result = n * i
     print(f"{n} * {i} = {result}")
+
+```
 # 3. TRIÁNGULO DE ASTERÍSCOS
+```python
 
 k = input("Introduce k: ")
 
@@ -27,7 +34,10 @@ for i in range(int(k)):
     for e in range(i):
         result += "*"
     print(result)
+
+```
 # 4. PIRÁMIDE DE ASTERÍSCOS
+```python
 
 p = input("Introduce un número impar: ")
 
@@ -37,7 +47,10 @@ while ((int(p) % 2 == 0)):
 for i in range(1,int(p)+1,2):
     espacios = ((int(p) - i )/ 2)
     print(int(espacios) * " " + "*" * i)
+
+```
 # 5. NÚMERO MAYOR Y MENOR
+```python
 
 numMenor, numMayor = 0, 0
 
@@ -50,7 +63,10 @@ for i in range (5):
     if (n < numMenor): numMenor = n
 
 print(f"El número mayor es {numMayor} y el menor es {numMenor}")
+
+```
 # 6. CONVERSIÓN DE UNIDADES
+```python
 
 posiblesUds = ['mm','cm','m','km']
 
@@ -90,7 +106,10 @@ if ((unidadOr in posiblesUds) & (unidadDest in posiblesUds)):
     print(cantidad)
 else:
     print('No has introducido una unidad válida')
+
+```
 # 7. ACIERTA EL NÚMERO
+```python
 
 from random import *
 numero = randint(1,1000)
@@ -99,7 +118,10 @@ while entrada != numero:
     if numero > entrada: entrada = int(input('Introduce un numero más alto: '))
     if numero < entrada: entrada = int(input('Introduce un numero más bajo: '))
 if entrada == numero: print('Lo lograste!')
+
+```
 # 8. PIEDRA, PAPEL O TIJERA
+```python
 
 from random import *
 
@@ -160,7 +182,10 @@ if (puntosIA == 5):
     print('Has perdido :(')
 else:
     print('Has ganado :)')
+
+```
 # 9. SECUENCIA DE FIBONACCI
+```python
 
 def generar_fibonacci(n):
     if n <= 0:
@@ -171,3 +196,5 @@ def generar_fibonacci(n):
     return fib[:n]
     
 print(generar_fibonacci(int(input("Ingrese el número de elementos de Fibonacci: "))))
+
+```
